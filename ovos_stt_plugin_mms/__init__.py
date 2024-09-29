@@ -3,18 +3,7 @@ from typing import Optional
 from ovos_plugin_manager.templates.stt import STT
 from ovos_stt_plugin_wav2vec import Wav2VecSTT
 from speech_recognition import AudioData
-
-
-def standardize_lang_tag(lang_code, macro=True):
-    """https://langcodes-hickford.readthedocs.io/en/sphinx/index.html"""
-    # TODO - move to ovos-utils
-    try:
-        from langcodes import standardize_tag as std
-        return std(lang_code, macro=macro)
-    except:
-        if macro:
-            return lang_code.split("-")[0].lower()
-        return lang_code.lower()
+from ovos_utils.lang import standardize_lang_tag
 
 
 class MMSSTT(STT):
@@ -139,7 +128,7 @@ class MMSSTT(STT):
 
     def __init__(self, config: dict = None):
         config = config or {}
-        self.model = config["model"] = config.get("model") or "facebook/mms-1b-fl102"
+        self.model = config["model"] = config.get("model") or "facebook/mms-1b-all"
         super().__init__(config)
         self.stt = Wav2VecSTT(config=config)
 
@@ -158,11 +147,11 @@ class MMSSTT(STT):
 
 
 if __name__ == "__main__":
-    b = MMSSTT()
+    b = MMSSTT({"use_cuda": True})
     print(len(b.available_languages), sorted(list(b.available_languages)))
     from speech_recognition import Recognizer, AudioFile
 
-    eu = "/home/miro/PycharmProjects/ovos-stt-wav2vec-plugin/9ooDUDs5.wav"
+    eu = "/home/miro/PycharmProjects/ovos-stt-plugin-fasterwhisper/jfk.wav"
     with AudioFile(eu) as source:
         audio = Recognizer().record(source)
 
