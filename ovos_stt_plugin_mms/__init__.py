@@ -2,8 +2,9 @@ from typing import Optional
 
 from ovos_plugin_manager.templates.stt import STT
 from ovos_stt_plugin_wav2vec import Wav2VecSTT
-from speech_recognition import AudioData
+from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
+from speech_recognition import AudioData
 
 
 class MMSSTT(STT):
@@ -135,15 +136,18 @@ class MMSSTT(STT):
     def execute(self, audio: AudioData, language: Optional[str] = None):
         return self.stt.execute(audio, language)
 
-    @property
-    def available_languages(self) -> set:
-        if self.model == "facebook/mms-1b-all":  # 1162 langs
-            return set(standardize_lang_tag(t) for t in self._LANGS3)
-        elif self.model == "facebook/mms-1b-l1107":  # 1107 langs
-            return set(standardize_lang_tag(t) for t in self._LANGS2)
-        elif self.model == "facebook/mms-1b-fl102":  # 102 langs
-            return set(standardize_lang_tag(t) for t in self._LANGS1)
-        return set()
+    @classproperty
+    def available_languages(cls) -> set:
+        try:
+            if cls.model == "facebook/mms-1b-all":  # 1162 langs
+                return set(standardize_lang_tag(t) for t in cls._LANGS3)
+            elif cls.model == "facebook/mms-1b-l1107":  # 1107 langs
+                return set(standardize_lang_tag(t) for t in cls._LANGS2)
+            elif cls.model == "facebook/mms-1b-fl102":  # 102 langs
+                return set(standardize_lang_tag(t) for t in cls._LANGS1)
+            return set()
+        except:  # no self.model if accessed in class
+            return cls._LANGS3
 
 
 if __name__ == "__main__":
