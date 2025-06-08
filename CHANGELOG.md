@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.0a1) (2024-09-29)
+## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.1a1) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.1.0...0.2.0a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.0...0.2.1a1)
 
 **Merged pull requests:**
 
-- feat:cuda support [\#1](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/1) ([JarbasAl](https://github.com/JarbasAl))
+- fix: compatibility with ovos-plugin-manager 1.X.X [\#3](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/3) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
