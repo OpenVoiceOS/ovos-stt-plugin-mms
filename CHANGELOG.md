@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.1a1) (2025-06-08)
+## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.2a1) (2025-12-18)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.0...0.2.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.1...0.2.2a1)
 
 **Merged pull requests:**
 
-- fix: compatibility with ovos-plugin-manager 1.X.X [\#3](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/3) ([JarbasAl](https://github.com/JarbasAl))
+- chore: Configure Renovate [\#5](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/5) ([renovate[bot]](https://github.com/apps/renovate))
 
 
 
