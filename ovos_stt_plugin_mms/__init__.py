@@ -4,7 +4,7 @@ from ovos_plugin_manager.templates.stt import STT
 from ovos_stt_plugin_wav2vec import Wav2VecSTT
 from ovos_utils import classproperty
 from ovos_utils.lang import standardize_lang_tag
-from speech_recognition import AudioData
+from ovos_plugin_manager.utils.audio import AudioData, AudioFile
 
 
 class MMSSTT(STT):
@@ -153,11 +153,10 @@ class MMSSTT(STT):
 if __name__ == "__main__":
     b = MMSSTT({"use_cuda": True})
     print(len(b.available_languages), sorted(list(b.available_languages)))
-    from speech_recognition import Recognizer, AudioFile
 
     eu = "/home/miro/PycharmProjects/ovos-stt-plugin-fasterwhisper/jfk.wav"
     with AudioFile(eu) as source:
-        audio = Recognizer().record(source)
+        audio = source.read()
 
     a = b.execute(audio, language="gl")
     print(a)
