@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2a4](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.2a4) (2026-01-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.2a3...0.2.2a4)
+
+**Merged pull requests:**
+
+- refactor: modernize/drop speech\_recognition [\#14](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.2a3](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.2a3) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.2a2...0.2.2a3)
