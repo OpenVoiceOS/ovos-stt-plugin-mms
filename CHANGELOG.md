@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.2a5](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.2a5) (2026-06-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.2a4...0.2.2a5)
+
+**Merged pull requests:**
+
+- docs: add TigreGotico attribution, link ILENIA [\#15](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/15) ([JarbasAl](https://github.com/JarbasAl))
+- chore\(deps\): update actions/setup-python action to v6 [\#11](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/11) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v6 [\#10](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.2a4](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/tree/0.2.2a4) (2026-01-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-mms/compare/0.2.2a3...0.2.2a4)
